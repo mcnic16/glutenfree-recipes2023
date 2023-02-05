@@ -37,3 +37,9 @@ main {
     height: 200px;
     width: 200px
 }
+
+/*---------------------------------------flashes-----------------*/
+.flashes h4 {
+    line-height: 2;
+}
+
