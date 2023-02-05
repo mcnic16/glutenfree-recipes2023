@@ -60,6 +60,13 @@ things I want to remember about cooking the dish.
 
 
 ## Bugs
+I had trouble getting psql to work , I kept having the error:
+ psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+        Is the server running locally and accepting connections on that socket?
+And everything I tried did not work so I have decided to use MongoDB instead.
+
+
+
 
 
 
