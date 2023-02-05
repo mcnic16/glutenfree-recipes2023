@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
@@ -16,12 +16,43 @@
 <body>
 
     <header>
-
+<!----Navbar----->
+<nav class="blue">
+    <div class="nav-wrapper gluten-nav">
+        <h5 class="title">Gluten Free Recipes</h5>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-burger"></i></a>
+        <ul class="gluten-list right hide-on-med-and-down">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">Starters</a></li>
+            <li><a href="">Mains</a>/a></li>
+            <li><a href="">Desserts</a></li>
+            <li><a href="">Drinks</a></li>
+        </ul>
+<!------------right side menu ------------->
+        <ul class="gluten-right right hide-on-med-and-down">
+            <li><a href="">Log Out</a></li>
+            <li><a href="">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+    </div>
+</nav>
+<!------------Responsive Menu----------->
+         <ul class="sidenav" id="mobile-demo">
+             <li><a href="{{ url_for('home') }}">Home</a></li>
+             <li><a href="">Starters</a></li>
+             <li><a href="">Mains</a></li>
+             <li><a href="">Desserts</a></li>
+             <li><a href="">Drinks</a></li>
+             <li><a href="">Log Out</a></li>
+             <li><a href="">Log In</a></li>
+             <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
     </header>
     
     {% block content %}
     {% endblock %}
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}

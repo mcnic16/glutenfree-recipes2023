@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+* {box-sizing: border-box;}
+
+/*---------------------------------------Title in Nabar-----------------*/
+.title {
+    font-size: 30px;
+}
+
+/*---------------------------------------Centering content in navar-----------------*/
+.gluten-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.gluten-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gluten-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.start {
+    height: 200px;
+    width: 200px
+}
