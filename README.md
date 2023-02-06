@@ -32,6 +32,8 @@ have.
 7. I want to be able to add in notes to each dish so I can add my own thoughts, experiences or
 things I want to remember about cooking the dish.
 
+8. I want to be able to have my own personel profile where only I can add or delete items.
+
 
 ## Wireframes
 
