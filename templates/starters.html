@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<ul class="collapsible">
+        {% for starter in starters %}
+        <li>
+          <div class="collapsible-header white-text light-blue darken-2">
+            <i class="fa-solid fa-angle-down"></i>
+            <strong>{{ starter.starter_name }}</strong>
+          </div>
+          <div class="collapsible-body">
+  
+        <strong>Tools:</strong>
+        <p>{{ starter.starter_tools }}</p>
+        <strong>Ingredients:</strong>
+        <p>{{ starter.starter_ingredients }}</p>
+        <strong>Directions:</strong>
+        <p>{{ starter.starter_directions }}</p>
+
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    {% endblock %}

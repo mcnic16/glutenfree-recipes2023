@@ -101,7 +101,7 @@ def logout():
 @app.route("/starter")
 def starters():
     starters = mongo.db.starter.find()
-    return render_template("starter.html", starters=starters)
+    return render_template("starters.html", starters=starters)
 
 
 if __name__ == "__main__":
