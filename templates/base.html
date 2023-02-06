@@ -24,7 +24,7 @@
         <ul class="gluten-list right hide-on-med-and-down">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             {% if session.user %}
-                    <li><a href="">Starters</a></li>
+                    <li><a href="{{ url_for('starters') }}">Starters</a></li>
                     <li><a href="">Mains</a></li>
                     <li><a href="">Desserts</a></li>
                     <li><a href="">Drinks</a></li>
@@ -44,7 +44,7 @@
          <ul class="sidenav" id="mobile-demo">
              <li><a href="{{ url_for('home') }}">Home</a></li>
              {% if session.user %}
-                <li><a href="">Starters</a></li>
+                <li><a href="{{ url_for('starters') }}">Starters</a></li>
                  <li><a href="">Mains</a></li>
                  <li><a href="">Desserts</a></li>
                  <li><a href="">Drinks</a></li>

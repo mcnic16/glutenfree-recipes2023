@@ -10,4 +10,7 @@ $(document).ready(function(){
  let collapsibles = document.querySelectorAll(".collapsible");
  M.Collapsible.init(collapsibles);
 
- 
+ //collapsable for the starter, drinks, main, desserts
+ $(document).ready(function(){
+  $('.collapsible').collapsible();
+});
