@@ -43,3 +43,66 @@ main {
     line-height: 2;
 }
 
+/*---------------------------------------Centering card panels-----------------*/
+.card-panel {
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+}
+
+.container {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+.row.card-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.row.card-container .col {
+    width: 25%;
+    margin-left: initial;
+    left: initial ;
+    right: initial;
+    margin-bottom: 30px;
+}
+/*---------------------------------------Resizing Images in Cards-----------------*/
+.gluten-pic {
+    height: 150px;
+    width: 150px;
+}
+/*---------------------------------------Centering information in cards-----------------*/
+.card-center {
+    text-align: center;
+}
+
+/*---------------------------------------media-queiries-----------------*/
+
+@media screen and (max-width: 1075px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .row.card-container .col {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 830px) {
+
+    .row.card-container .col {
+        width: 100%;
+    }
+}

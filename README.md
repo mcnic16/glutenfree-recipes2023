@@ -34,6 +34,9 @@ things I want to remember about cooking the dish.
 
 8. I want to be able to have my own personel profile where only I can add or delete items.
 
+You must register and log into the site before you can view, delete, or add items.
+
+
 
 ## Wireframes
 
@@ -56,9 +59,14 @@ things I want to remember about cooking the dish.
 
   -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-Here is the Registration Page
+Here is the Registration Page:
   <h2 align="center"><img src="static/img/registration.png" width="400px"></h2>
 
+Here is the Login Page:
+<h2 align="center"><img src="static/img/login.png" width="400px"></h2>
+
+Here is the profile page:
+<h2 align="center"><img src="static/img/profile.png" width="400px"></h2>
 
 
 
