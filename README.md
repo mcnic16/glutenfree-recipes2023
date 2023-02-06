@@ -50,6 +50,13 @@ things I want to remember about cooking the dish.
 
 
 ## Testing
+ -  The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the front ednd of the project to ensure there were no syntax errors in the project.
+
+  -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+Here is the Registration Page
+  <h2 align="center"><img src="static/img/registration.png" width="400px"></h2>
+
 
 
 

@@ -15,7 +15,7 @@ main {
     font-size: 30px;
 }
 
-/*---------------------------------------Centering content in navar-----------------*/
+/*---------------------------------------positioning content in navar-----------------*/
 .gluten-nav {
     display: flex;
     justify-content: center;
