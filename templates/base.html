@@ -24,13 +24,14 @@
         <ul class="gluten-list right hide-on-med-and-down">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="">Starters</a></li>
-            <li><a href="">Mains</a>/a></li>
+            <li><a href="">Mains</a></li>
             <li><a href="">Desserts</a></li>
             <li><a href="">Drinks</a></li>
         </ul>
 <!------------right side menu ------------->
         <ul class="gluten-right right hide-on-med-and-down">
             <li><a href="">Log Out</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
@@ -44,6 +45,7 @@
              <li><a href="">Desserts</a></li>
              <li><a href="">Drinks</a></li>
              <li><a href="">Log Out</a></li>
+             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
              <li><a href="{{ url_for('login') }}">Log In</a></li>
              <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
