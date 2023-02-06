@@ -74,7 +74,6 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-
     return render_template("login.html")
 
 
@@ -85,7 +84,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("cuisine.html", username=username)
 
     return redirect(url_for("login"))
 
@@ -102,6 +101,12 @@ def logout():
 def starters():
     starters = mongo.db.starter.find()
     return render_template("starters.html", starters=starters)
+
+
+@app.route("/add_starters")
+def add_starters():
+    # starters to the database
+    return render_template("add_starters.html")
 
 
 if __name__ == "__main__":
