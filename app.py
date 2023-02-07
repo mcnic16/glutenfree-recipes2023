@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 def home():
     # home page
-    return render_template("cuisine.html")
+    return render_template("profile.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -97,16 +97,33 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/starter")
+@app.route("/starters")
 def starters():
     starters = mongo.db.starter.find()
     return render_template("starters.html", starters=starters)
 
 
-@app.route("/add_starters")
+@app.route("/add_starters", methods=["GET", "POST"])
 def add_starters():
-    # starters to the database
-    return render_template("add_starters.html")
+    if request.method == "POST":
+        starter = {
+            "starter_names": request.form.get("starter_names"),
+            "starter_tools": request.form.get("starter_tools"),
+            "starter_description": request.form.get("starter_description"),
+            "starter_ingredients": request.form.get("starter_ingredients"),
+            "starter_directions": request.form.get("starter_directions"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(starter)
+        flash("Starter Successfully Added")
+        return redirect(url_for("starters"))
+
+
+    cuisine = mongo.db.cuisine.find().sort("cuisine_name", 1)
+    return render_template("add_starters.html", starters=starters)
+
+
+
 
 
 if __name__ == "__main__":
