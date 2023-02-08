@@ -19,7 +19,7 @@
 <!----Navbar----->
 <nav class="blue">
     <div class="nav-wrapper gluten-nav">
-        <h5 class="title">Gluten Free Recipes</h5>
+        <a href="{{ url_for('home') }}"><h5 class="title">Gluten Free Recipes</h5></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-burger"></i></a>
         <ul class="gluten-list right hide-on-med-and-down">
             
@@ -32,7 +32,7 @@
 <!------------right side menu ------------->
                 <ul class="gluten-right right hide-on-med-and-down">
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Home</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Add to Database</a></li>
             {% else %}
                      <li><a href="{{ url_for('login') }}">Log In</a></li>
                      <li><a href="{{ url_for('register') }}">Register</a></li>

@@ -37,7 +37,11 @@ main {
     height: 200px;
     width: 200px
 }
+/*---------------------------------------home-pic-----------------*/
 
+.homepic {
+    margin-top: 30px;
+}
 /*---------------------------------------flashes-----------------*/
 .flashes h4 {
     line-height: 2;
@@ -105,4 +109,10 @@ main {
     .row.card-container .col {
         width: 100%;
     }
+
+    .homepicsize {
+        height: 310px;
+        width: 310px;
+    }
 }
+
