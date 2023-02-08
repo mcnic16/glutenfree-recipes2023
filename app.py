@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 def home():
     # home page
-    return render_template("cuisine.html")
+    return render_template("login.html")
 
 
 @app.route("/cuisine")
@@ -118,10 +118,8 @@ def add_starters():
             "starter_description": request.form.get("starter_description"),
             "starter_ingredients": request.form.get("starter_ingredients"),
             "starter_directions": request.form.get("starter_directions"),
-            "created_by": session["user"]
             }
         mongo.db.starter.insert_one(starter)
-        flash("Starter Successfully Added")
         return redirect(url_for("starters"))
 
     return render_template("add_starters.html", starters=starters)
