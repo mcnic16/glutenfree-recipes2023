@@ -111,6 +111,7 @@ def starters():
 
 @app.route("/add_starters", methods=["GET", "POST"])
 def add_starters():
+     # add starters in the database
     if request.method == "POST":
         starter = {
             "starter_names": request.form.get("starter_names"),
@@ -122,7 +123,14 @@ def add_starters():
         mongo.db.starter.insert_one(starter)
         return redirect(url_for("starters"))
 
-    return render_template("add_starters.html", starters=starters)
+    return render_template("add_starters.html")
+
+
+@app.route("/edit_starters/<starter_id>",  methods=["GET", "POST"])
+def edit_starters(starter_id):
+    # edit starters in the database
+    starter = mongo.db.starter.find_one({"_id": ObjectId(starter_id)})
+    return render_template("edit_starters.html", starter=starter)
 
 
 
