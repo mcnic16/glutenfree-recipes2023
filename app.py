@@ -109,6 +109,9 @@ def starters():
     return render_template("starters.html", starters=starters)
 
 
+@app.route("/add_starters")
+def add_starters():
+    return render_template("add_starters.html")
 
 
 if __name__ == "__main__":

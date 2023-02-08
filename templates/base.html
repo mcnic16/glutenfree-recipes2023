@@ -49,7 +49,8 @@
                  <li><a href="">Desserts</a></li>
                  <li><a href="">Drinks</a></li>
                  <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                 <li><a href="{{ url_for('profile', username=session['user']) }}"></a>Home</li>
+                 <li><a href="{{ url_for('profile', username=session['user']) }}">Add to Database</a></li>
+                 
              {% else %}
                  <li><a href="{{ url_for('login') }}">Log In</a></li>
                  <li><a href="{{ url_for('register') }}">Register</a></li>
