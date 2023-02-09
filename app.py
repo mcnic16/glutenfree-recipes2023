@@ -130,6 +130,18 @@ def add_starters():
 @app.route("/edit_starters/<starter_id>",  methods=["GET", "POST"])
 def edit_starters(starter_id):
     # edit starters in the database
+    if request.method == "POST":
+        edited_starter = {
+            "starter_names": request.form.get("starter_names"),
+            "starter_tools": request.form.get("starter_tools"),
+            "starter_description": request.form.get("starter_description"),
+            "starter_ingredients": request.form.get("starter_ingredients"),
+            "starter_directions": request.form.get("starter_directions"),
+            "created_by": session["user"]
+            }
+        mongo.db.starter.update({"_id": ObjectId(starter_id)}, edited_starter)
+        flash("Task Successfully Updated")
+
     starter = mongo.db.starter.find_one({"_id": ObjectId(starter_id)})
     return render_template("edit_starters.html", starter=starter)
 
