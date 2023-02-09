@@ -127,6 +127,15 @@ def add_starters():
     return render_template("add_starters.html")
 
 
+@app.route("/edit_starters/<starter_id>",  methods=["GET", "POST"])
+def edit_starters(starter_id):
+    # edit starters in the database
+    starter = mongo.db.starter.find_one({"_id": ObjectId(starter_id)})
+    return render_template("edit_starters.html", starter=starter)
+
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
