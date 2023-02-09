@@ -140,12 +140,17 @@ def edit_starters(starter_id):
             "created_by": session["user"]
             }
         mongo.db.starter.update({"_id": ObjectId(starter_id)}, edited_starter)
-        flash("Task Successfully Updated")
+        flash("Starter Successfully Updated")
 
     starter = mongo.db.starter.find_one({"_id": ObjectId(starter_id)})
     return render_template("edit_starters.html", starter=starter)
 
 
+@app.route("/delete_starters/<starter_id>")
+def delete_starters(starter_id):
+    mongo.db.starter.remove({"_id": ObjectId(starter_id)})
+    flash("starter Successfully Deleted")
+    return redirect(url_for("starters"))
 
 
 if __name__ == "__main__":
