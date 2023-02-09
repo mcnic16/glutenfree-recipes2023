@@ -109,8 +109,21 @@ def starters():
     return render_template("starters.html", starters=starters)
 
 
-@app.route("/add_starters")
+@app.route("/add_starters", methods=["GET", "POST"])
 def add_starters():
+    # add starters in the database
+    if request.method == "POST":
+        starter = {
+            "starter_names": request.form.get("starter_names"),
+            "starter_tools": request.form.get("starter_tools"),
+            "starter_description": request.form.get("starter_description"),
+            "starter_ingredients": request.form.get("starter_ingredients"),
+            "starter_directions": request.form.get("starter_directions"),
+            "created_by": session["user"]
+            }
+        mongo.db.starter.insert_one(starter)
+        return redirect(url_for("starters"))
+
     return render_template("add_starters.html")
 
 
