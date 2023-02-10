@@ -258,23 +258,9 @@ def delete_desserts(dessert_id):
     return redirect(url_for("desserts"))
 
 
-@app.route("/edit_drinks/<drink_id>",  methods=["GET", "POST"])
-def edit_drinks(drink_id):
-    # edit desserts in the database
-    if request.method == "POST":
-        edited_drink = {
-            "drink_names": request.form.get("drink_names"),
-            "drink_tools": request.form.get("drink_tools"),
-            "drink_description": request.form.get("drink_description"),
-            "drink_ingredients": request.form.get("drink_ingredients"),
-            "drink_directions": request.form.get("drink_directions"),
-            "created_by": session["user"]
-            }
-        mongo.db.drink.update({"_id": ObjectId(drink_id)}, edited_drink)
-        flash("Desserts Successfully Updated")
 
-    drink = mongo.db.drink.find_one({"_id": ObjectId(drink_id)})
-    return render_template("edit_drinks.html", drink=drink)
+
+    
 
 
 @app.route("/drinks")
@@ -300,6 +286,33 @@ def add_drinks():
         return redirect(url_for("drinks"))
 
     return render_template("add_drinks.html")
+
+
+@app.route("/edit_drinks/<drink_id>",  methods=["GET", "POST"])
+def edit_drinks(drink_id):
+    # edit desserts in the database
+    if request.method == "POST":
+        edited_drink = {
+            "drink_names": request.form.get("drink_names"),
+            "drink_tools": request.form.get("drink_tools"),
+            "drink_description": request.form.get("drink_description"),
+            "drink_ingredients": request.form.get("drink_ingredients"),
+            "drink_directions": request.form.get("drink_directions"),
+            "created_by": session["user"]
+            }
+        mongo.db.drink.update({"_id": ObjectId(drink_id)}, edited_drink)
+        flash("Desserts Successfully Updated")
+
+    drink = mongo.db.drink.find_one({"_id": ObjectId(drink_id)})
+    return render_template("edit_drinks.html", drink=drink)
+
+
+@app.route("/delete_drinks/<drink_id>")
+def delete_drinks(drink_id):
+    # delete drink from the database
+    mongo.db.drink.remove({"_id": ObjectId(drink_id)})
+    flash("Drink Successfully Deleted")
+    return redirect(url_for("drinks"))
 
 
 if __name__ == "__main__":
