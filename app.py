@@ -148,9 +148,17 @@ def edit_starters(starter_id):
 
 @app.route("/delete_starters/<starter_id>")
 def delete_starters(starter_id):
+    # delete starters from the database
     mongo.db.starter.remove({"_id": ObjectId(starter_id)})
     flash("starter Successfully Deleted")
     return redirect(url_for("starters"))
+
+
+@app.route("/mains")
+def mains():
+    # main course to the database
+    mains = mongo.db.main.find()
+    return render_template("mains.html", mains=mains)
 
 
 if __name__ == "__main__":

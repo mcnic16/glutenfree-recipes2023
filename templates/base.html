@@ -25,7 +25,7 @@
             
             {% if session.user %}
                     <li><a href="{{ url_for('starters') }}">Starters</a></li>
-                    <li><a href="">Mains</a></li>
+                    <li><a href="{{ url_for('mains') }}">Mains</a></li>
                     <li><a href="">Desserts</a></li>
                     <li><a href="">Drinks</a></li>
                 </ul>
@@ -45,7 +45,7 @@
              
              {% if session.user %}
                  <li><a href="{{ url_for('starters') }}">Starters</a></li>
-                 <li><a href="">Mains</a></li>
+                 <li><a href="{{ url_for('mains') }}">Mains</a></li>
                  <li><a href="">Desserts</a></li>
                  <li><a href="">Drinks</a></li>
                  <li><a href="{{ url_for('logout') }}">Log Out</a></li>

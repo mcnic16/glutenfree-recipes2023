@@ -18,21 +18,33 @@ As a user I would:
 
 1. I want to see the recipes broken into various categories  so I can decide what I would like to prepare and when.
 
-
+The recipes are broken into Starters, Mains, Desserts and Drinks
 
 2. I want to view a list of gluten-free recipes that is healthy for me to eat.
 
-3. I want to know the prepareations for each meal so I can allocate my time accordingly.
+All the recipes will be added when you type them in and save them.
+
+3. I want to know the preparations for each meal so I can allocate my time accordingly.
+
+There is a section on each recipe for the preparations.
 
 4. I want to be able to save my recipes so I can have quick access to all my favorites.
 
+All recipes are automatically added to the database where you can edit or delete them,
+
 5. I want to view a complete list of ingredients so I  know what’s needed to prepare the dish.
+
+There is a section on each recipe for ingredients.
 
 6. I want to be able to remove ingredients from the list so I don’t double-up on items I may already
 have.
 
+There is an option to remove the items from the database.
+
 7. I want to be able to add in notes to each dish so I can add my own thoughts, experiences or
 things I want to remember about cooking the dish.
+
+There is a directions section where you can add this and also cooking times.
 
 8. I want to be able to have my own personel profile where only I can add or delete items.
 
