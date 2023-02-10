@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h5 class="card-center">Edit Drinks</h5>
+<div class="row card-panel grey lighten-5">
+<div class="row">
+  <form class="col s12" method="POST" action="{{ url_for('edit_drinks', drink_id=drink._id) }}">
+        <!------  Name ----------->
+        <div class="input-field col s6">
+            <textarea id="drink_names" name="drink_names" class="materialize-textarea validate" required >
+            {{- drink.drink_names -}}</textarea>
+          <label for="drink_names">Name</label>
+        </div>
+      <!----------- Tools ----------->
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="drink_tools" name="drink_tools" class="materialize-textarea validate" required >
+            {{- drink.drink_tools -}}</textarea>
+          <label for="drink_tools">Tools Required</label>
+        </div>
+      </div>
+      <!-------- Ingredients ---------->
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="drink_ingredients" name="drink_ingredients" class="materialize-textarea validate" required >
+            {{- drink.drink_ingredients -}}</textarea>
+          <label for="drink_ingredients">Ingredients</label>
+        </div>
+      </div>
+      <!--------- Directions ------------>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="drink_directions" name="drink_directions" class="materialize-textarea validate" required >
+            {{- drink.drink_directions -}} </textarea>
+          <label for="drink_directions">Directions</label>
+        </div>
+      </div>
+      <!----------- submit button ------------>
+      <div class="row">
+        <div class="col s12 center-align">
+            <button class="btn waves-effect waves-light blue" type="submit" name="action">Edit Task
+              <i class="fas fa-plus-square right"></i>
+              </button>
+        </div>
+    </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
