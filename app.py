@@ -258,6 +258,13 @@ def delete_desserts(dessert_id):
     return redirect(url_for("desserts"))
 
 
+@app.route("/drinks")
+def drinks():
+    # drinks 
+    drinks = mongo.db.drinks.find()
+    return render_template("drinks.html", drinks=drinks)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
