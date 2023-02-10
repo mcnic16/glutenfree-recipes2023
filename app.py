@@ -261,8 +261,26 @@ def delete_desserts(dessert_id):
 @app.route("/drinks")
 def drinks():
     # drinks 
-    drinks = mongo.db.drinks.find()
+    drinks = mongo.db.drink.find()
     return render_template("drinks.html", drinks=drinks)
+
+
+@app.route("/add_drinks", methods=["GET", "POST"])
+def add_drinks():
+    # add drinks to the database
+    if request.method == "POST":
+        drink = {
+            "drink_names": request.form.get("drink_names"),
+            "drink_tools": request.form.get("drink_tools"),
+            "drink_description": request.form.get("drink_description"),
+            "drink_ingredients": request.form.get("drink_ingredients"),
+            "drink_directions": request.form.get("drink_directions"),
+            "created_by": session["user"]
+            }
+        mongo.db.drink.insert_one(drink)
+        return redirect(url_for("drinks"))
+
+    return render_template("add_drinks.html")
 
 
 if __name__ == "__main__":
