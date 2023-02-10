@@ -1,6 +1,6 @@
 1 align="center">GlutenFree Recipes</h1>
 
-[View live project]()
+[View live project](https://glutenfree-recipes.herokuapp.com/)
 
 This project, is a Gluten-Free recipe database where you can can enter your recipes on the home page, and they will show up on the appropriate pages, i.e Starters , Mains etc.
 There is also the option to edit or delete these recipes.
@@ -17,6 +17,8 @@ The target audience of this site is for people with celiac disease or who need t
 As a user I would:
 
 1. I want to see the recipes broken into various categories  so I can decide what I would like to prepare and when.
+
+
 
 2. I want to view a list of gluten-free recipes that is healthy for me to eat.
 
@@ -60,7 +62,7 @@ You must register and log into the site before you can view, delete, or add item
   -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
 Here is the Registration Page:
-  <h2 align="center"><img src="static/img/registration.png" width="400px"></h2>
+<h2 align="center"><img src="static/img/registration.png" width="400px"></h2>
 
 Here is the Login Page:
 <h2 align="center"><img src="static/img/login.png" width="400px"></h2>
@@ -68,6 +70,22 @@ Here is the Login Page:
 Here is the profile page:
 <h2 align="center"><img src="static/img/profile.png" width="400px"></h2>
 
+Here Is the home page:
+<h2 align="center"><img src="static/img/home.png" width="400px"></h2>
+
+Here are the tests from the starters:
+
+Starters:
+
+<img src="static/img/starters.png" width="400px">
+
+Edit Starters:
+
+<img src="static/img/edit_starters.png" width="400px">
+
+Add Starters:
+
+<img src="static/img/add_starters.png" width="400px">
 
 
 ## Testing User Stories from User Experience Section
@@ -78,9 +96,17 @@ Here is the profile page:
 
 ## Bugs
 I had trouble getting psql to work , I kept having the error:
- psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
-        Is the server running locally and accepting connections on that socket?
-And everything I tried did not work so I have decided to use MongoDB instead.
+
+ psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory Is the server running locally and accepting connections on that socket?
+
+Everything I tried did not work so I have decided to use MongoDB instead.
+I also had an error which was:
+
+'Collection' object is not callable. If you meant to call the 'update' method on a 'Collection' object it is failing because no such method exists 
+
+This was related to the line mongo.db.starter.update({"_id": ObjectId(starter_id)}, edited_starter) in my edit_starters function in app.py, so I had downgrade pymongo from  4.3.3 to 3.12.3.
+
+
 
 
 
