@@ -213,6 +213,24 @@ def desserts():
     return render_template("desserts.html", desserts=desserts)
 
 
+@app.route("/add_desserts", methods=["GET", "POST"])
+def add_desserts():
+    # add main course to the database
+    if request.method == "POST":
+        dessert = {
+            "dessert_names": request.form.get("dessert_names"),
+            "dessert_tools": request.form.get("dessert_tools"),
+            "dessert_description": request.form.get("dessert_description"),
+            "dessert_ingredients": request.form.get("dessert_ingredients"),
+            "dessert_directions": request.form.get("dessert_directions"),
+            "created_by": session["user"]
+            }
+        mongo.db.dessert.insert_one(dessert)
+        return redirect(url_for("desserts"))
+
+    return render_template("add_desserts.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
