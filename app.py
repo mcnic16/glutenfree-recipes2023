@@ -156,7 +156,7 @@ def delete_starters(starter_id):
 
 @app.route("/mains")
 def mains():
-    # main course to the database
+    # main course 
     mains = mongo.db.main.find()
     return render_template("mains.html", mains=mains)
 
@@ -181,9 +181,9 @@ def add_mains():
 
 @app.route("/edit_mains/<main_id>",  methods=["GET", "POST"])
 def edit_mains(main_id):
-    # edit mains to the database
+    # edit mains in the database
     if request.method == "POST":
-        edited_starter = {
+        edited_main = {
             "main_names": request.form.get("main_names"),
             "main_tools": request.form.get("main_tools"),
             "main_description": request.form.get("main_description"),
@@ -196,6 +196,14 @@ def edit_mains(main_id):
 
     main = mongo.db.main.find_one({"_id": ObjectId(main_id)})
     return render_template("edit_mains.html", main=main)
+
+
+@app.route("/delete_mains/<main_id>")
+def delete_mains(main_id):
+    # delete mains from the database
+    mongo.db.main.remove({"_id": ObjectId(main_id)})
+    flash("Main course Successfully Deleted")
+    return redirect(url_for("mains"))
 
 
 if __name__ == "__main__":
