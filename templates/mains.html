@@ -21,7 +21,7 @@
       <p><em>by: {{ main.created_by }}</em></p>
       <div class="center-align">
         {% if session.user|lower == main.created_by|lower %}
-        <a href=""
+        <a href="{{ url_for('edit_mains', main_id=main._id) }}"
           class="modal-close waves-effect waves-blue btn-flat light-blue">Edit</a>
         <a href=""
           class="modal-close waves-effect waves-blue btn-flat red">Delete</a>
