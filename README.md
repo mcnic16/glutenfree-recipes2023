@@ -99,15 +99,21 @@ Add Starters:
 
 <img src="static/img/add_starters.png" width="400px">
 
+Mains:
 
-## Testing User Stories from User Experience Section
+<img src="static/img/mains.png" width="400px">
 
+Edit mains:
 
+<img src="static/img/edit_mains.png" width="400px">
 
+Add mains:
+
+<img src="static/img/add_mains.png" width="400px">
 
 
 ## Bugs
-I had trouble getting psql to work , I kept having the error:
+I could not get postgres to work , I kept having the error:
 
  psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory Is the server running locally and accepting connections on that socket?
 
