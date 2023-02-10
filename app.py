@@ -231,6 +231,25 @@ def add_desserts():
     return render_template("add_desserts.html")
 
 
+@app.route("/edit_desserts/<dessert_id>",  methods=["GET", "POST"])
+def edit_desserts(dessert_id):
+    # edit mains in the database
+    if request.method == "POST":
+        edited_dessert = {
+            "dessert_names": request.form.get("dessert_names"),
+            "dessert_tools": request.form.get("dessert_tools"),
+            "dessert_description": request.form.get("dessert_description"),
+            "dessert_ingredients": request.form.get("dessert_ingredients"),
+            "dessert_directions": request.form.get("dessert_directions"),
+            "created_by": session["user"]
+            }
+        mongo.db.dessert.update({"_id": ObjectId(dessert_id)}, edited_dessert)
+        flash("Desserts Successfully Updated")
+
+    dessert = mongo.db.dessert.find_one({"_id": ObjectId(dessert_id)})
+    return render_template("edit_desserts.html", dessert=dessert)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
