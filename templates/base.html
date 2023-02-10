@@ -26,7 +26,7 @@
             {% if session.user %}
                     <li><a href="{{ url_for('starters') }}">Starters</a></li>
                     <li><a href="{{ url_for('mains') }}">Mains</a></li>
-                    <li><a href="">Desserts</a></li>
+                    <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
                     <li><a href="">Drinks</a></li>
                 </ul>
 <!------------right side menu ------------->
@@ -46,7 +46,7 @@
              {% if session.user %}
                  <li><a href="{{ url_for('starters') }}">Starters</a></li>
                  <li><a href="{{ url_for('mains') }}">Mains</a></li>
-                 <li><a href="">Desserts</a></li>
+                 <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
                  <li><a href="">Drinks</a></li>
                  <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                  <li><a href="{{ url_for('profile', username=session['user']) }}">Add to Database</a></li>
