@@ -179,6 +179,25 @@ def add_mains():
     return render_template("add_mains.html")
 
 
+@app.route("/edit_mains/<main_id>",  methods=["GET", "POST"])
+def edit_mains(main_id):
+    # edit mains to the database
+    if request.method == "POST":
+        edited_starter = {
+            "main_names": request.form.get("main_names"),
+            "main_tools": request.form.get("main_tools"),
+            "main_description": request.form.get("main_description"),
+            "main_ingredients": request.form.get("main_ingredients"),
+            "main_directions": request.form.get("main_directions"),
+            "created_by": session["user"]
+            }
+        mongo.db.main.update({"_id": ObjectId(main_id)}, edited_main)
+        flash("Main Courses Successfully Updated")
+
+    main = mongo.db.main.find_one({"_id": ObjectId(main_id)})
+    return render_template("edit_mains.html", main=main)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
