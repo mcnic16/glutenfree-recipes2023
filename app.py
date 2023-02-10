@@ -215,7 +215,7 @@ def desserts():
 
 @app.route("/add_desserts", methods=["GET", "POST"])
 def add_desserts():
-    # add main course to the database
+    # add desserts to the database
     if request.method == "POST":
         dessert = {
             "dessert_names": request.form.get("dessert_names"),
@@ -233,7 +233,7 @@ def add_desserts():
 
 @app.route("/edit_desserts/<dessert_id>",  methods=["GET", "POST"])
 def edit_desserts(dessert_id):
-    # edit mains in the database
+    # edit desserts in the database
     if request.method == "POST":
         edited_dessert = {
             "dessert_names": request.form.get("dessert_names"),
@@ -248,6 +248,14 @@ def edit_desserts(dessert_id):
 
     dessert = mongo.db.dessert.find_one({"_id": ObjectId(dessert_id)})
     return render_template("edit_desserts.html", dessert=dessert)
+
+
+@app.route("/delete_desserts/<dessert_id>")
+def delete_desserts(dessert_id):
+    # delete desserts from the database
+    mongo.db.dessert.remove({"_id": ObjectId(dessert_id)})
+    flash("Desserts Successfully Deleted")
+    return redirect(url_for("desserts"))
 
 
 if __name__ == "__main__":
