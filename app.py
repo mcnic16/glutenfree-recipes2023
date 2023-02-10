@@ -161,6 +161,24 @@ def mains():
     return render_template("mains.html", mains=mains)
 
 
+@app.route("/add_mains", methods=["GET", "POST"])
+def add_mains():
+    # add main course to the database
+    if request.method == "POST":
+        main = {
+            "main_names": request.form.get("main_names"),
+            "main_tools": request.form.get("main_tools"),
+            "main_description": request.form.get("main_description"),
+            "main_ingredients": request.form.get("main_ingredients"),
+            "main_directions": request.form.get("main_directions"),
+            "created_by": session["user"]
+            }
+        mongo.db.main.insert_one(main)
+        return redirect(url_for("mains"))
+
+    return render_template("add_mains.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
