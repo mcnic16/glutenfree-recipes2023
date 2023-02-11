@@ -53,16 +53,11 @@ things I want to remember about cooking the dish.
 9. I want the site to be easy navigate
 
       When you enter the site you, you will have a page with a gluten-free picture, on the left hand side in the nav bar are links to either register or login, if you have already registered.
-      To add a recipe there is a link on the right hand side called Add to Database where you will be taken to a page where you can add starters, mains, desserts and drinks.
+      To add a recipe there is a link on the right hand side called Create Recipe where you will be taken to a page where you can add starters, mains, desserts and drinks.
       On the left hand side in the Navbar there are links which will take you to the the link that you require. When you click on these recipes , the fields will show Tools, Ingredients and the directions required, there is also a edit button where you can edit these fields.
       When you have updated the fields, a message will come up to tell you it has been updated, then just click in the category of food you edited and the edited recipe will be there.
       There is also a option to delete the recipe aswell.
       On the mobile version the menu is in the burger in the navbar.
-
-
-
-## Wireframes
-
 
 
 ## Design
@@ -96,6 +91,7 @@ The typography is Arial (sans-serif)
   Herouku was used to deploy the project
  MongoDB was used to store the Database
 - [MongoDB:](https://www.mongodb.com/)
+MongoDB was used to store the database
 
 
 ## Testing
@@ -168,16 +164,26 @@ Add Desserts:
 
 The base.html validater did bring alot of errors up but they were all because of the jinja template.
 
+-  The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the front ednd of the project to ensure there were no syntax errors in the project.
+
+  -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 CSS:
 
 <img src="static/img/css.png" width="400px">
 
-The site was tested on various machines:
+The site was tested on various ways:
+
 https://ui.dev/amiresponsive?
+
 Galaxy A51
+
 Laptop
 
+Desktop PC
 
+Responsiveness in chrome
+
+and checked on Edge, Chrome and Firefox
 
 
 ## Bugs
@@ -193,18 +199,38 @@ I also had an error which was:
 This was related to the line mongo.db.starter.update({"_id": ObjectId(starter_id)}, edited_starter) in my edit_starters function in app.py, so I had downgrade pymongo from  4.3.3 to 3.12.3.
 
 
-
-
-
-
-
-
 ## Deployment
 
+- The project was deployed to Heroku using the following steps...
 
+1. In the Gitpod Terminal type pip3 list - which will show which Python packages are  currently    installed in our workspace.
+2. Type pip3 freeze --local > requirements.txt - which will freeze the current Python packages into a requirements.txt. Then check requirements.txt to make sure the files were created succesfully.
+3. Type echo web: python app.py > Procfile in the terminal to create the Procfile required for Heroku and make sure there no blank line underneath.
+4. Log into Heroku
+5. When you are logged in on your dashboard click on Create a New App.
+6. Give your app a name and select the region closest to you.
+7. Click Create app
+8. Setup Automatic Deployment from the GitHub repository.
+9. Make sure your GitHub profile is displayed, then add the repository name,  then click 'Search'.
+   once it finds your repo, click to connect to this app.
+10. From the Settings tab on Heroku, and click "Reveal Conig Vars"
+11. Add the following variables:
+    IP: 0.0.0.0
+    MONGO_DBNAME:
+    MONGO_URI
+    PORT: 5000
+    SECRET_KEY:
+12. Push all files in Github
+13. Enable Automatic Deployment on Heroku
+14. Click Deploy Branch
+15. Once that is built click "View" to launch app.
 
 
 ## Acknowledgements
+-   My Mentor for continuous helpful feedback.
+-   Tutor support at Code Institute for their support
+-   Images were from a Google Image search for pictures of GlutenFree food.
+
 
 
 
