@@ -54,9 +54,10 @@ things I want to remember about cooking the dish.
 
       When you enter the site you, you will have a page with a gluten-free picture, on the left hand side in the nav bar are links to either register or login, if you have already registered.
       To add a recipe there is a link on the right hand side called Add to Database where you will be taken to a page where you can add starters, mains, desserts and drinks.
-      On the left hand side in the Navbar there are links which will take you to the the link that you require. When you click on these recipes , the fields will show Tools Ingredients and the directions required, there is also a edit button where you can edit these fields, when you have updated the fields, a message will come up to tell you it has been updated, then just click in the category of food you edited and the edited recipe will be there.
+      On the left hand side in the Navbar there are links which will take you to the the link that you require. When you click on these recipes , the fields will show Tools, Ingredients and the directions required, there is also a edit button where you can edit these fields.
+      When you have updated the fields, a message will come up to tell you it has been updated, then just click in the category of food you edited and the edited recipe will be there.
       There is also a option to delete the recipe aswell.
-      
+
 
 ## Wireframes
 
@@ -64,18 +65,35 @@ things I want to remember about cooking the dish.
 
 ## Design
 
-
+The colour scheme of the website is blue and white.
 
 ## Typography
 
-
+The typography is Arial (sans-serif)
 
 ## Technologies Used
 
+- HTML
+- CSS
+- Javascript
+- Python
+- Flask
 
 
 ## Frameworks, Libraries & Programs Used
 
+- [Materialize:](https://materializecss.com/)
+ Materialize was used for the styling
+- [Font Awesome:](https://fonts.google.com/)
+ Font Awesome was used on some pages on the website 
+- [Git:](https://git-scm.com/)
+ Git was used for the Gitpod terminal to commit to Git and Push to GitHub.
+- [GitHub:](https://github.com/)
+ GitHub is used to store the projects code after being pushed from Git.
+- [Herouko:](https://dashboard.heroku.com/)
+  Herouku was used to deploy the project
+ MongoDB was used to store the Database
+- [MongoDB:](https://www.mongodb.com/)
 
 
 ## Testing
@@ -120,6 +138,37 @@ Edit mains:
 Add mains:
 
 <img src="static/img/add_mains.png" width="400px">
+
+Desserts:
+
+<img src="static/img/desserts.png" width="400px">
+
+Edit Desserts:
+
+<img src="static/img/edit_desserts.png" width="400px">
+
+Add Desserts:
+
+<img src="static/img/add_desserts.png" width="400px">
+
+Drinks:
+
+<img src="static/img/drinks1.png" width="400px">
+
+Edit Drinks:
+
+<img src="static/img/edit_drinks.png" width="400px">
+
+Add Desserts:
+
+<img src="static/img/add_drinks.png" width="400px">
+
+
+The base.html validater did bring alot of errors up but they were all because of the jinja template.
+
+CSS:
+
+<img src="static/img/css.png" width="400px">
 
 
 ## Bugs
