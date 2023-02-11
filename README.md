@@ -5,10 +5,11 @@
 This project, is a Gluten-Free recipe database where you can can enter your recipes on the home page, and they will show up on the appropriate pages, i.e Starters , Mains etc.
 There is also the option to edit or delete these recipes.
 I chose this project because a family member has celiac disease and has to maintian a gluten-free diet. 
-This is my 2nd attempt at this project because my first project failed, and I had to start the project again due to the amount of errors I was getting which I never had previously
+This is my 2nd attempt at this project because my first project failed, and I had to start the project again due to the amount of errors I was getting which I never had previously.
 
 
-screen shots here
+<img src="static/img/homepage.png" width="400px">
+<img src="static/img/cuisinepage.png" width="400px">
 
 ## User Experience
 
@@ -164,7 +165,7 @@ Add Desserts:
 
 The base.html validater did bring alot of errors up but they were all because of the jinja template.
 
--  The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the front ednd of the project to ensure there were no syntax errors in the project.
+-  The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the front end of the project to ensure there were no syntax errors in the project.
 
   -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 CSS:
