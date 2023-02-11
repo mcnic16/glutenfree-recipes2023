@@ -57,6 +57,8 @@ things I want to remember about cooking the dish.
       On the left hand side in the Navbar there are links which will take you to the the link that you require. When you click on these recipes , the fields will show Tools, Ingredients and the directions required, there is also a edit button where you can edit these fields.
       When you have updated the fields, a message will come up to tell you it has been updated, then just click in the category of food you edited and the edited recipe will be there.
       There is also a option to delete the recipe aswell.
+      On the mobile version the menu is in the burger in the navbar.
+
 
 
 ## Wireframes
@@ -169,6 +171,13 @@ The base.html validater did bring alot of errors up but they were all because of
 CSS:
 
 <img src="static/img/css.png" width="400px">
+
+The site was tested on various machines:
+https://ui.dev/amiresponsive?
+Galaxy A51
+Laptop
+
+
 
 
 ## Bugs
