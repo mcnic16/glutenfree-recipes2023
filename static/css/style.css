@@ -85,6 +85,11 @@ main {
     text-align: center;
 }
 
+.homepicsize {
+    height: 700px;
+    width: 700px;
+}
+
 /*---------------------------------------media-queiries-----------------*/
 
 @media screen and (max-width: 1075px) {
@@ -101,6 +106,11 @@ main {
     .row.card-container .col {
         width: 50%;
     }
+}
+
+.homepicsize {
+    height: 600px;
+    width: 600px;
 }
 
 
