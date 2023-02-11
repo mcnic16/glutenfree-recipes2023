@@ -1,4 +1,4 @@
-1 align="center">GlutenFree Recipes</h1>
+<h1 align="center">GlutenFree Recipes</h1>
 
 [View live project](https://glutenfree-recipes.herokuapp.com/)
 
@@ -18,43 +18,53 @@ As a user I would:
 
 1. I want to see the recipes broken into various categories  so I can decide what I would like to prepare and when.
 
-The recipes are broken into Starters, Mains, Desserts and Drinks
+     The recipes are broken into Starters, Mains, Desserts and Drinks
 
 2. I want to view a list of gluten-free recipes that is healthy for me to eat.
 
-All the recipes will be added when you type them in and save them.
+     All the recipes will be added when you type them in and save them.
 
 3. I want to know the preparations for each meal so I can allocate my time accordingly.
 
-There is a section on each recipe for the preparations.
+      There is a section on each recipe for the preparations.
 
 4. I want to be able to save my recipes so I can have quick access to all my favorites.
 
-All recipes are automatically added to the database where you can edit or delete them,
+      All recipes are automatically added to the database where you can edit or delete them,
 
 5. I want to view a complete list of ingredients so I  know what’s needed to prepare the dish.
 
-There is a section on each recipe for ingredients.
+      There is a section on each recipe for ingredients.
 
 6. I want to be able to remove ingredients from the list so I don’t double-up on items I may already
 have.
 
-There is an option to remove the items from the database.
+      There is an option to remove the items from the database.
 
 7. I want to be able to add in notes to each dish so I can add my own thoughts, experiences or
 things I want to remember about cooking the dish.
 
-There is a directions section where you can add this and also cooking times.
+      There is a directions section where you can add this and also cooking times.
 
 8. I want to be able to have my own personel profile where only I can add or delete items.
 
-You must register and log into the site before you can view, delete, or add items.
+      You must register and log into the site before you can view, delete, or add items.
 
+9. I want the site to be easy navigate
 
+      When you enter the site you, you will have a page with a gluten-free picture, on the left hand side in the nav bar are links to either register or login, if you have already registered.
+      To add a recipe there is a link on the right hand side called Add to Database where you will be taken to a page where you can add starters, mains, desserts and drinks.
+      On the left hand side in the Navbar there are links which will take you to the the link that you require. When you click on these recipes , the fields will show Tools Ingredients and the directions required, there is also a edit button where you can edit these fields, when you have updated the fields, a message will come up to tell you it has been updated, then just click in the category of food you edited and the edited recipe will be there.
+      There is also a option to delete the recipe aswell.
+      
 
 ## Wireframes
 
+
+
 ## Design
+
+
 
 ## Typography
 

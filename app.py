@@ -301,7 +301,7 @@ def edit_drinks(drink_id):
             "created_by": session["user"]
             }
         mongo.db.drink.update({"_id": ObjectId(drink_id)}, edited_drink)
-        flash("Desserts Successfully Updated")
+        flash("Drinks Successfully Updated")
 
     drink = mongo.db.drink.find_one({"_id": ObjectId(drink_id)})
     return render_template("edit_drinks.html", drink=drink)
