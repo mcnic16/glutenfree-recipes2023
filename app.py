@@ -258,11 +258,6 @@ def delete_desserts(dessert_id):
     return redirect(url_for("desserts"))
 
 
-
-
-    
-
-
 @app.route("/drinks")
 def drinks():
     # drinks 
